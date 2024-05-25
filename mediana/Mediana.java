@@ -46,7 +46,12 @@ public class Mediana {
         input.close();
     }
 
-    public void mediana(){
+    Mediana(int[] vetor){
+        this.setVetor(vetor);
+        this.setTamanho(vetor.length);
+    }
+
+    public float mediana(){
         int tamanho = this.getTamanho();
         int[] vetor = this.getVetor();
         for(int i = 0; i < tamanho; i++){
@@ -105,10 +110,10 @@ public class Mediana {
         }
         if(this.getTamanho() % 2 == 0){
             float mediana = (this.getMP1() + this.getMP2()) / 2.0f;
-            System.out.println("A mediana eh: " + mediana);
+            return mediana;
         }
         else{
-            System.out.println("A mediana eh: " + this.getMP());
+            return this.getMP();
         }
     }
 }
