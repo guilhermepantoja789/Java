@@ -23,9 +23,9 @@ public class Mediana {
         int[] vetor = this.getVetor();
         for(int i = 0; i < tamanho; i++){                   //executa o bloco abaixo para cada elemento do vetor
             int qntdNumero = 1;                             //quantidade do elemento no vetor
-            int qntdMaiorQue = 0;                           //quantitda de numeros que dado elemento é maior que
+            int qntdMaiorQue = 0;                           //quantidade de numeros que dado elemento é maior que
             for(int j = 0; j < tamanho; j++){               //comparar o elemento de indice i com todos os elementos do vetor
-                if(i != j){
+                if(i != j){                                 //se i e j forem iguais estaremos tratando do mesmo valor, logo so executa se for diferente
                     if(vetor[i] == vetor[j]){
                         qntdNumero++;                       //caso o elemento seja igual, temos um elemento repetido
                     }
@@ -33,7 +33,7 @@ public class Mediana {
                         qntdMaiorQue++;                     //caso o elemento seja maior que o outro valor comparado, encrementamos
                     }
                 }
-                else{}                                      //se o elemento nao for maior nem igual ao valor comparado, nao faz nada
+                else{}                                      
             }
             int posInicial = qntdMaiorQue;                  //determinamos dois inteiros que determinarão a posicao do elemento no vetor
             int posFinal = qntdNumero + posInicial - 1;     //se o elemento se repete, ele vai ser tratado como um grupamento, possuindo posicao inicial e final
