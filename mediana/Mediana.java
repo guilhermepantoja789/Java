@@ -1,18 +1,7 @@
-import java.util.Scanner;
-
 public class Mediana {
     private int mP, mP1, mP2, tamanho;   //mediana parcial(caso impar), mediana parcial 1(caso par), mediana parcial 2(caso par), tamanho do vetor
     private int[] vetor;
-
-    Mediana(Scanner input, int tamanho, int[] vetor){
-        for(int i = 0; i < tamanho; i++){
-            vetor[i] = input.nextInt();
-        }
-        this.setVetor(vetor);
-        this.setTamanho(tamanho);
-        input.close();
-    } //construtor para leitura
-
+    
     Mediana(int[] vetor){
         this.setVetor(vetor);
         this.setTamanho(vetor.length);
